@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Visualizar Dados</title>
+    <!-- Importar Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <!-- Fontes e Estilos CSS -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/styles.css">
+    <!-- Importar Font Awesome para ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <!-- Cabeçalho -->
+    <header>
+        <h1>Visualizar Dados</h1>
+        <!-- Barra de Navegação -->
+        <nav>
+            <ul>
+                <li><a href="/upload">Upload de Dados</a></li>
+                <li><a href="/visualize">Visualizar Dados</a></li>
+                <li><a href="/query">Fazer Consultas</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Conteúdo Principal -->
+    <main>
+        <button id="load-data">
+            <i class="fas fa-database"></i> Carregar Dados
+        </button>
+        <br>
+        <div id="data-table" style="display: flex; justify-content: center;"></div>
+    </main>
+    <section>
+        <form id="table-form">
+            <label for="table-name">Nome da Tabela:</label>
+            <input type="text" id="table-name" name="table-name" required>
+            <button type="submit">Mostrar Tabela</button>
+        </form>
+        <div id="table-display"></div>
+    </section>
+
+    <!-- Scripts -->
+    <script src="/static/scripts.js"></script>
+</body>
+
+</html>

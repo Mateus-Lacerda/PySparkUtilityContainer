@@ -1,0 +1,13 @@
+services:
+  python-spark-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      - JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
+      - SPARK_HOME=/opt/spark/spark-3.2.0-bin-hadoop3.2
+    volumes:
+      - .:/app
+    ports:
+      - "8000:8000"
+    command: [ "python", "-u", "src/entrypoint.py" ]
