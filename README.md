@@ -1,5 +1,6 @@
 # PySpark Container
 
+![Docker Image CI](https://img.shields.io/docker/automated/mateuslacerdaia/pysparkutilitycontainer)
 ![License](https://img.shields.io/github/license/Mateus-Lacerda/PySparkUtilityContainer)
 
 ## Descrição
