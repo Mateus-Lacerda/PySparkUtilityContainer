@@ -192,9 +192,3 @@ Contribuições são bem-vindas! Sinta-se à vontade para abrir issues ou pull r
 ## Licença
 
 Este projeto está licenciado sob a Licença MIT. Veja o arquivo LICENSE para mais detalhes.
-
----
-
-**Nota:** Certifique-se de substituir `yourdockerhubusername`, `seuusuario`, e outros placeholders com suas informações reais.
-
-Se tiver dúvidas ou precisar de assistência adicional, sinta-se à vontade para entrar em contato!
