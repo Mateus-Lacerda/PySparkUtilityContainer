@@ -8,3 +8,7 @@ __pycache__/
 data/
 
 spark-warehouse/
+
+files/
+sqls/
+results/

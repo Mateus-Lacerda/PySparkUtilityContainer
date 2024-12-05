@@ -40,7 +40,7 @@ COPY requirements.txt .
 RUN pip install --no-cache-dir --default-timeout=100 -r requirements.txt
 
 # Copie o código da aplicação
-COPY . .
+COPY ./src ./src
 
 # Exponha a porta que o FastAPI usará
 EXPOSE 8000

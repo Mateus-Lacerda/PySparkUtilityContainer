@@ -54,11 +54,11 @@ class App:
             return {"status": "ok"}
 
         @self.app.get("/api/v1/query")
-        async def query(q: str):
+        async def query(q: str, csv: bool = False):
             if not q:
                 raise HTTPException(status_code=400, detail="Query parameter 'q' is required.")
             try:
-                result = self.SPARK.query(q)
+                result = self.SPARK.query(q, csv)
                 return {"result": result}
             except Exception as e:
                 raise HTTPException(status_code=500, detail=str(e))
@@ -83,7 +83,7 @@ class App:
         async def upload_file(file: UploadFile = File(...), name: str = None):
             try:
                 os.makedirs("data", exist_ok=True)
-                file_location = f"data/{file.filename}"
+                file_location = f"data/{file.filename.replace('_csv', '')}"
                 with open(file_location, "wb") as f:
                     f.write(await file.read())
                 self.SPARK.create_df_from_file(file_location, name or file.filename)
