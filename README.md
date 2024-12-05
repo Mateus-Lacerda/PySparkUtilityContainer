@@ -79,6 +79,65 @@ docker-compose.yml
    Abra o seu navegador e navegue até: [http://localhost:8000](http://localhost:8000)
 
 ## Uso
+### CLI
+
+A aplicação também pode ser utilizada via linha de comando (CLI). Abaixo estão alguns exemplos de uso:
+
+- **Verificação de Saúde da Aplicação**
+
+  ```bash
+  python src/pyspark_container.py --health
+  ```
+
+  Este comando verifica o status da aplicação.
+
+- **Upload de Arquivo**
+
+  ```bash
+  python src/pyspark_container.py --upload
+  ```
+
+  Este comando permite fazer o upload de um arquivo CSV especificado pelo usuário.
+
+- **Upload de Todos os Arquivos da Pasta `files`**
+
+  ```bash
+  python src/pyspark_container.py --upload_from_folder
+  ```
+
+  Este comando faz o upload de todos os arquivos CSV presentes na pasta `files`.
+
+- **Execução de Consulta SQL**
+
+  ```bash
+  python src/pyspark_container.py --query
+  ```
+
+  Este comando permite executar uma consulta SQL especificada pelo usuário.
+
+- **Execução de Consulta SQL a partir de um Arquivo**
+
+  ```bash
+  python src/pyspark_container.py --query_from_sql_file
+  ```
+
+  Este comando permite executar uma consulta SQL a partir de um arquivo `.sql` especificado pelo usuário.
+
+- **Escrever Resultado da Consulta em um Arquivo**
+
+  ```bash
+  python src/pyspark_container.py --query --write
+  ```
+
+  Este comando executa uma consulta SQL e escreve o resultado em um arquivo CSV na pasta `results`.
+
+- **Exemplo Completo**
+
+  ```bash
+  python src/pyspark_container.py --query_from_sql_file --write
+  ```
+
+  Este exemplo executa uma consulta SQL a partir de um arquivo `.sql` e escreve o resultado em um arquivo CSV na pasta `results`.
 
 ### Endpoints Disponíveis
 
